@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        [v-cloak]{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box" v-cloak="" style="margin: 40px 400px;">
+        <lee :ddd="arr" ></lee>
+    </div>
+    <template id="lee">
+        <div style="width: 400px; overflow: hidden; background: red; height: 100px;" >
+            <div @click="index=$index" v-for="(i,$index) in json" style="float: left; width:100px;text-align: center; background: #ccc; line-height: 30px;">
+                <div>
+                    <span>{{i.a}}</span>
+                </div>
+            </div>
+            <div v-for="(i,$index) in json" style="background: #999; border: 1px black solid;height: 100px; float: left; width: 100%;">
+                <div  v-if="index==$index">{{i.b}}</div>
+            </div>
+        </div>
+    </template>
+    <script src="js/vue.js"></script>
+    <script>
+        Vue.component('lee',{
+            template:'#lee',
+            props: ['ddd'],
+            data(){
+                return{
+                    json:this.ddd,
+                    index:0
+                }
+            }
+        })
+
+        new Vue({
+            el:'#box',
+            data:{
+                arr:[
+                    {a:'title1',b:'contenthahaha1'},
+                    {a:'title2',b:'contenthahaha2'},
+                    {a:'title3',b:'contenthahaha3'},
+                    {a:'title4',b:'contenthahaha4'}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
