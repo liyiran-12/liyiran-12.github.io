@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        [v-cloak]{
+            display: none;
+        }
+        #big{
+            width: 100%;
+            background-size: 100%;
+            height: 760px;
+            background:url("https://ccdn.goodq.top/caches/165e3167ecf65dd36391e4ea48a69a7f/aHR0cHM6Ly81NGY2Y2Q1MDNiZTRlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTQvMDYvMTU3NzM1NDlhYzcyYTc3MzEyMGUxMjVmNzRiMDQzOTMuanBn.jpg");
+        }
+        .nav{
+            overflow: hidden;
+        }
+        .nav ul{
+            overflow: hidden;
+            margin-left:640px;
+        }
+        .nav ul li{
+            float: left;
+            width: 18%;
+            list-style: none;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" v-cloak="">
+        <div id="big">
+            <div class="nav">
+                <ul>
+                    <li>首页</li>
+                    <li>关于我们</li>
+                    <li>课程介绍</li>
+                    <li>新闻资讯</li>
+                    <li>联系我们</li>
+                </ul>
+            </div>
+        </div>
+        <div style="min-height: 360px; background: #efe7c4; width: 100%;">
+            <div>
+                <a-lee>
+                    <h2 slot="title">ABOUT US  ·  关于我们</h2>
+                    <p slot="text">応损捠捡换攴朰朲朳枛朸売壳圢桹奿妀夲夳，夵壱売壳,圢圤圥圦圧圩圪囡咍咎咐厺厼厽桼忝忞帉屴屵屶屷宓宔宖忟忡忪忬忭忮忯忰囤。忱忲忳忴念忶汹</p>
+                    <p slot="text">忸忹忺忻忼忾忿怂，怃怄怅怆怇怈怉怊怛怞怟怡怢怣怤怦怩怬怭。怮怯怰怲怳怴怵怺怼悙怿恀恁恂恃恄恅，恒団恇恈恉恍恎恏恑恒恓恔恖恗恙恚恜恝恞</p>
+                    <p slot="text">恡恦恧恬恮恰恱恲恴恷恹恺，恻恽悁悆悇怵怷怸怺怼朰朲朳枛朸売悈悊。</p>
+                </a-lee>
+            </div>
+        </div>
+        <div style="min-height: 700px; padding-bottom: 60px;">
+            <div>
+                <a-lee>
+                    <h2 slot="title">CASE  •  案例展示  •  SHOWS</h2>
+                    <p slot="text">社会根据受教育程度选拔人才。人通过受教育实现社会地位的变迁。教育伴</p>
+                    <p slot="text">随着人类社会的产生而产生，随着社会的发展而发展，与人类社会共始终。</p>
+                </a-lee>
+            </div>
+            <div style="width:80% ;margin: 0 auto; overflow: hidden; padding-left: 130px; box-sizing: border-box;">
+                <div style="width: 29%;  float: left; margin-right: 10px;" v-for="i in arr">
+                <img  style="width: 100% ;height: 100%;" :src="i.img">
+                <p style="text-align: center; font-size: 18px ; line-height: 40px;">{{i.tt}}</p>
+            </div>
+            </div>
+            
+        </div>
+        <div style="background: #eee; text-align: center; font-size: 14px; line-height: 60px;">
+            <p>版权所有 ©2014  地址：上海市松江区佘山林荫大道18号    京ICP备********号 </p>
+        </div>
+    </div>
+    <template id="lee">
+        <div style="padding: 50px 0; box-sizing: border-box; text-align: center;">
+            <div style="font-size: 20px; line-height: 80px;">
+                <slot name="title"></slot>
+            </div>
+            <div style="font-size: 16px; color: #666;line-height: 30px;">
+                <slot name="text"></slot>
+            </div>
+        </div>
+    </template>
+    <script src="js/vue.js"></script>
+    <script>
+        Vue.component('aLee',{
+            template:'#lee'
+        })
+        new Vue({
+            el:'#box',
+            data:{
+                arr:[
+                    {img:'https://ccdn.goodq.top/caches/165e3167ecf65dd36391e4ea48a69a7f/aHR0cHM6Ly81NGY2Y2Q1MDNiZTRlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTUvMDIvNTZmOTdmNDgyZWYyNWUyZjQ0MGRmNGE0MjRlMmFiMWUtMzMweDIyMC5qcGc_p_p100_p_3D.jpg',tt:'asfewad'},
+                    {img:'https://ccdn.goodq.top/caches/165e3167ecf65dd36391e4ea48a69a7f/aHR0cHM6Ly81NGY2Y2Q1MDNiZTRlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTUvMDEvOGQwM2EyNjY0ZjM3M2UwMjFmZjBiNjY0NTUwMzQ3ZjYtMzMweDIyMC5wbmc_p_p100_p_3D.png',tt:'asfewad'},
+                    {img:'https://ccdn.goodq.top/caches/165e3167ecf65dd36391e4ea48a69a7f/aHR0cHM6Ly81NGY2Y2Q1MDNiZTRlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTUvMDEvZWE0YjdjMDgwYzMxY2VhNThlZTZiZTI3N2E2YzI4YjUtMzMweDIyMC5wbmc_p_p100_p_3D.png',tt:'asfewad'},
+                    {img:'https://ccdn.goodq.top/caches/165e3167ecf65dd36391e4ea48a69a7f/aHR0cHM6Ly81NGY2Y2Q1MDNiZTRlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTUvMDEvOGQwM2EyNjY0ZjM3M2UwMjFmZjBiNjY0NTUwMzQ3ZjYtMzMweDIyMC5wbmc_p_p100_p_3D.png',tt:'asfewad'},
+                    {img:'https://ccdn.goodq.top/caches/165e3167ecf65dd36391e4ea48a69a7f/aHR0cHM6Ly81NGY2Y2Q1MDNiZTRlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTUvMDIvMWEwNjE2ODFlMmFjMjQwZjYwYzkyODE2MzI1NWRlMmItMzMweDIyMC5qcGc_p_p100_p_3D.jpg',tt:'asfewad'},
+                    {img:'https://ccdn.goodq.top/caches/165e3167ecf65dd36391e4ea48a69a7f/aHR0cHM6Ly81NGY2Y2Q1MDNiZTRlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTUvMDIvNWMyYjZiM2FhMmVmODBmOWVmNGFlOGE2ZGQ4MGQ3NzUtMzMweDIyMC5qcGc_p_p100_p_3D.jpg',tt:'asfewad'}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
