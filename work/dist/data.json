@@ -1,0 +1,73 @@
+{
+    "arr": [
+        {
+          "title": "水饺",
+          "text": [
+            {
+              "name": "三鲜水饺",
+              "prize": "￥25",
+              "img":
+                "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1787231560,3348711106&fm=26&gp=0.jpg"
+            },
+            {
+              "name": "猪肉白菜水饺",
+              "prize": "￥16",
+              "img":
+                "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1787231560,3348711106&fm=26&gp=0.jpg"
+            },
+            {
+              "name": "鲅鱼三鲜水饺",
+              "prize": "￥20",
+              "img":
+                "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1787231560,3348711106&fm=26&gp=0.jpg"
+            }
+          ]
+        },
+        {
+          "title": "凉菜",
+          "text": [
+            {
+              "name": "三鲜凉菜",
+              "prize": "￥25",
+              "img":
+                "https://ss0.baidu.com/73F1bjeh1BF3odCf/it/u=2594189478,2639883332&fm=85"
+            },
+            {
+              "name": "猪肉白菜凉菜",
+              "prize": "￥16",
+              "img":
+                "https://ss0.baidu.com/73F1bjeh1BF3odCf/it/u=2594189478,2639883332&fm=85"
+            },
+            {
+              "name": "鲅鱼三鲜凉菜",
+              "prize": "￥20",
+              "img":
+                "https://ss0.baidu.com/73F1bjeh1BF3odCf/it/u=2594189478,2639883332&fm=85"
+            }
+          ]
+        },
+        {
+          "title": "包子",
+          "text": [
+            {
+              "name": "三鲜包子",
+              "prize": "￥25",
+              "img":
+                "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3156773605,677267589&fm=26&gp=0.jpg"
+            },
+            {
+              "name": "猪肉白菜包子",
+              "prize": "￥16",
+              "img":
+                "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3156773605,677267589&fm=26&gp=0.jpg"
+            },
+            {
+              "name": "鲅鱼三鲜包子",
+              "prize": "￥20",
+              "img":
+                "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3156773605,677267589&fm=26&gp=0.jpg"
+            }
+          ]
+        }
+      ]
+}
